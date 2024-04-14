@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API - CEP</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/salvarCep.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <img src="./src/imgs/logo.png" alt="logo">
+    </header>
+
+    <main>
+        <section id="cep">
+
+            <div id="titulo"><h1>Cadastre um endereço:</h1></div><br>
+
+            <form name="frmCEP" id="formulario">
+
+            <div class="inputcep">
+                <label>CEP:</label>
+                <input type="text" name="txtcep" value="" maxlength="9" id="input-cep">
+            </div>
+
+            <div class="container">
+                <div class="estado">
+                    <label>ESTADO:</label>
+                    <input type="text" name="txtuf" value="" maxlength="2" id="estado">
+                </div>
+
+                <div class="cidade">
+                    <label>CIDADE:</label>
+                    <input type="text" name="txtcidade" value="" maxlength="50" id="cidade">
+                </div>
+            </div>
+
+            <div class="bairro">
+                <label>BAIRRO:</label>
+                <input type="text" name="txtbairro" value="" maxlength="30" id="bairro">
+            </div>
+
+            <div class="container">
+                <div class="logradouro">
+                    <label>LOGRADOURO:</label>
+                    <input type="text" name="txtlogradouro" value="" maxlength="100" id="logradouro">
+                </div>
+            
+                <div class="numero">
+                    <label>NÚMERO:</label>
+                    <input type="text" name="txtnro" value="" maxlength="10" id="numero">
+                </div>
+            </div>
+
+            <div class="complemento">
+                <label>COMPLEMENTO:</label>
+                <input type="text" name="txtcompl" value="" maxlength="15" id="complemento">
+            </div>
+
+            <div class="buttons">
+                <input type="button" name="btnsalvar" value="SALVAR" id="salvar">
+                <input type="button" name="btnlimpar" value="LIMPAR" id="limpar">
+            </div>
+
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h2>
+            <a href="https://github.com/nicollaswendel">&copy; Nícollas Wendel</a>
+        <h2>
+    </footer>
+
+</body>
+
+</html>
