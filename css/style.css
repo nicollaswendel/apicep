@@ -22,6 +22,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #12263A;
 }
 
 img{
@@ -48,12 +49,15 @@ label{
     font-size: 15px;
 }
 
-section{
+section {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
     border: solid 2px rgb(106, 185, 106);
     border-radius: 5px;
     color: white;
-    width: 50%;
-    height: 100%;
+    background-color: #12263A;
 }
 
 #formulario{
@@ -66,12 +70,12 @@ input[type="text"]{
     background-color: black;
     border: solid 2px rgb(106, 185, 106);
     border-radius: 5px;
-    width: 360px;
     height: 30px;
     margin-top: 2px;
     font-family: "Fjalla One", sans-serif;
     color: white;
     padding-left: 5px;
+    width: calc(100% - 12px);
 }
 
 input[type="button"]{
@@ -80,28 +84,32 @@ input[type="button"]{
     font-size: 15px;
 }
 
-input[id="input-cep"], input[id="estado"], input[id="cidade"], input[id="bairro"], input[id="logradouro"], input[id="numero"]{
-    margin-bottom: 25px;
+input[id="input-cep"], input[id="estado"], input[id="cidade"], input[id="bairro"], input[id="logradouro"]{
+    margin-bottom: 15px;
 }
 
 .container{
-    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.cidade, .estado, .logradouro, .numero{
-    display:inline-block;
-    vertical-align: top; /* Alinha os elementos verticalmente no topo */
-    width: 50%; /* Cada div ocupará metade da largura do contêiner pai */
+.cidade, .estado{
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    flex: 1;
+    min-width: calc(50% - 10px);
 }
 
 .buttons{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
     padding: 1%;
 }
 
-input[id="salvar"]{
+input[id="buscar"]{
     height: 30px;
     width: 100px;
     background-color: green;
@@ -119,7 +127,7 @@ input[id="limpar"]{
     border-radius: 3px;
 }
 
-input[id="salvar"]:hover{
+input[id="buscar"]:hover{
     background-color: rgb(104, 255, 190);
     cursor: pointer;
 }
@@ -135,9 +143,27 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #12263A;
 }
 
 a{
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+    .estado, .cidade {
+        min-width: 100%;
+    }
+    section {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.container > * {
+    margin-bottom: 0;
 }

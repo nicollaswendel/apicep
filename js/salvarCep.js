@@ -1,4 +1,4 @@
-const botaoSalvar = document.getElementById('salvar')
+const botaoBuscar = document.getElementById('buscar')
 const botaoLimpar = document.getElementById('limpar')
 
 const setDadosForm = function (dados){
@@ -47,7 +47,7 @@ const cleanCepForm = function (){
     }
 }
 
-botaoSalvar.addEventListener('click', function(){
+botaoBuscar.addEventListener('click', function(){
     getCepForm()
 })
 
